@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -60,7 +62,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                 dialog.getWindow().setLayout(width,height);
                 dialog.show();
 
-                final EditText editText=dialog.findViewById(R.id.edit_text);
+                final EditText editText=dialog.findViewById(R.id.editText);
                 Button btnUpdate=dialog.findViewById(R.id.btnUpdate);
 
                 editText.setText(sText);
@@ -106,7 +108,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
 
         TextView textView;
-        Button btnEdit,btnDelete;
+        ImageButton btnEdit,btnDelete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

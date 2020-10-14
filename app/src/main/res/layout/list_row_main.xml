@@ -7,36 +7,48 @@
     android:layout_height="wrap_content">
 
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="8dp">
+
+
+
+        <ImageButton
+            android:id="@+id/bt_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="Edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bt_delete"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:src="@drawable/ic_edit"
+            android:layout_marginRight="5dp" />
+
+        <ImageButton
+            android:id="@+id/bt_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Delete"
+            app:layout_constraintBaseline_toBaselineOf="@+id/bt_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            android:src="@drawable/ic_delete"
+            android:layout_marginRight="10dp" />
 
         <TextView
             android:id="@+id/text_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView"
-            android:textSize="14sp"/>
-
-        <ImageView
-            android:id="@+id/bt_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:src="@drawable/ic_edit"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp" />
-
-        <ImageView
-            android:id="@+id/bt_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:src="@drawable/ic_delete"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp" />
+            android:layout_height="45dp"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints,Suspicious0dp"
+            tools:layout_editor_absoluteX="0dp" />
 
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>
